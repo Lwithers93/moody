@@ -5,9 +5,9 @@ import {
   IoIosArrowDropleftCircle,
   IoIosArrowDroprightCircle,
 } from "react-icons/io";
-import { Fugaz_One } from "next/font/google";
+import { Fugaz_One, Poppins } from "next/font/google";
 
-const fugaz = Fugaz_One({ subsets: ["latin"], weight: ["400"] });
+const fugaz = Poppins({ subsets: ["latin"], weight: ["400"] });
 
 const months = {
   January: "Jan",

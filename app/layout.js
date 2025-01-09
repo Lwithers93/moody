@@ -1,4 +1,4 @@
-import { Fugaz_One, Open_Sans } from "next/font/google";
+import { Fugaz_One, Open_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { AuthProvider } from "@/context/AuthContext";
@@ -8,7 +8,7 @@ const openSans = Open_Sans({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-const fugaz = Fugaz_One({ subsets: ["latin"], weight: ["400"] });
+const fugaz = Poppins({ subsets: ["latin"], weight: ["400"] });
 
 // Displays on tab in browser
 export const metadata = {

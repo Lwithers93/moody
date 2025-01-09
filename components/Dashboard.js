@@ -8,7 +8,7 @@ import { doc, setDoc } from "firebase/firestore";
 import Loading from "./Loading";
 import Login from "./Login";
 
-const fugaz = Fugaz_One({ subsets: ["latin"], weight: ["400"] });
+const fugaz = { subsets: ["latin"], weight: ["400"] };
 
 export default function Dashboard() {
   const { currentUser, userDataObj, setUserDataObj, loading } = useAuth();
@@ -112,11 +112,13 @@ export default function Dashboard() {
         {Object.keys(statuses).map((status, statusIndex) => {
           return (
             <div key={statusIndex} className="flex flex-col gap-1 sm:gap-2">
-              <p className="font-medium capitalize text-xs sm:text-sm truncate">
+              <p className="font-medium capitalize text-xs sm:text-sm truncate mx-auto ">
                 {status.replaceAll("_", " ")}
               </p>
-              <p className={`text-base sm:text-lg truncate ${fugaz.className}`}>
-                {statuses[status]}
+              <p
+                className={`text-base sm:text-lg  mx-auto truncate ${fugaz.className}`}
+              >
+                {statuses[status] === "NaN" ? 0 : statuses[status]}
                 {status === "num_days" ? "🔥" : ""}
               </p>
             </div>

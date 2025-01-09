@@ -1,7 +1,7 @@
-import { Fugaz_One } from "next/font/google";
+import { Fugaz_One, Poppins } from "next/font/google";
 import React from "react";
 
-const fugaz = Fugaz_One({ subsets: ["latin"], weight: ["400"] });
+const fugaz = Poppins({ subsets: ["latin"], weight: ["400"] });
 
 export default function Button(props) {
   const { text, dark, full, clickHandler } = props;
