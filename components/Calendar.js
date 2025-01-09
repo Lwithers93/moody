@@ -88,7 +88,7 @@ export default function Calendar(props) {
     <div className="flex flex-col gap-4">
       <div className="grid grid-cols-5 gap-2">
         <button onClick={() => handleIncrementMonth(-1)} className="mr-auto">
-          <IoIosArrowDropleftCircle className="text-center capitalized text-indigo-500 duration-200 hover:opacity-60 focus:opacity-60 text-xl sm:text-2xl md:text-3xl" />
+          <IoIosArrowDropleftCircle className="text-center capitalized text-green-500 duration-200 hover:opacity-60 focus:opacity-60 text-xl sm:text-2xl md:text-3xl" />
         </button>
         <p
           className={
@@ -99,7 +99,7 @@ export default function Calendar(props) {
           {selectedMonth}, {selectedYear}
         </p>
         <button onClick={() => handleIncrementMonth(1)} className="ml-auto">
-          <IoIosArrowDroprightCircle className="text-center capitalized text-indigo-500 duration-200 hover:opacity-60 focus:opacity-60 text-xl sm:text-2xl md:text-3xl" />
+          <IoIosArrowDroprightCircle className="text-center capitalized text-green-500 duration-200 hover:opacity-60 focus:opacity-60 text-xl sm:text-2xl md:text-3xl" />
         </button>
       </div>
       <div className="flex flex-col overflow-hidden gap-1 py-4 sm:p-6 md:py-10">
@@ -123,10 +123,11 @@ export default function Calendar(props) {
                   return <div className="bg-white" key={dayOfWeekIndex}></div>;
                 }
 
+                // set colors
                 let color = demo
-                  ? gradients.indigo[baseRating[dayIndex]]
+                  ? gradients.green[baseRating[dayIndex]]
                   : dayIndex in data
-                  ? gradients.indigo[data[dayIndex]]
+                  ? gradients.green[data[dayIndex]]
                   : "white";
 
                 return (
@@ -135,10 +136,8 @@ export default function Calendar(props) {
                     style={{ background: color }}
                     className={
                       "text-xs sm:text-sm border border-solid p-2 flex items-center gap-2 justify-between rounded-lg " +
-                      (isToday
-                        ? " border-indigo-400 "
-                        : " border-indigo-100 ") +
-                      (color === "white" ? " text-indigo-400 " : " text-white ")
+                      (isToday ? " border-green-400 " : " border-green-100 ") +
+                      (color === "white" ? " text-green-400 " : " text-white ")
                     }
                   >
                     <p>{dayIndex}</p>
