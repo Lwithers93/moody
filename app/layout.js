@@ -12,7 +12,7 @@ const fugaz = Poppins({ subsets: ["latin"], weight: ["400"] });
 
 // Displays on tab in browser
 export const metadata = {
-  title: "Mood App",
+  title: "Moody",
   description: "Track your daily mood",
 };
 
@@ -37,9 +37,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <link rel="icon" href="/favicon.png" />
       {/* wrap entire application in Auth Provider  */}
-
       <body
         className={`w-full max-width-[1000px] mx-auto text-sm sm:text-base min-h-screen flex flex-col text-slate-700 ${openSans.variable} antialiased`}
       >
