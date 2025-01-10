@@ -122,23 +122,26 @@ export default function Login() {
               }
             >
               {/* show addition button for certain error message */}
-              {showModalBtn && isRegister ? (
-                <Button
-                  clickHandler={() => {
-                    setIsRegister(!isRegister);
-                    setErrorMessage("");
-                  }}
-                  text="Sign In"
-                />
-              ) : (
-                <Button
-                  clickHandler={() => {
-                    setIsRegister(!isRegister);
-                    setErrorMessage("");
-                  }}
-                  text="Sign Up"
-                />
-              )}
+              {showModalBtn &&
+                isRegister(
+                  <Button
+                    clickHandler={() => {
+                      setIsRegister(!isRegister);
+                      setErrorMessage("");
+                    }}
+                    text="Sign In"
+                  />
+                )}
+              {showModalBtn &&
+                !isRegister(
+                  <Button
+                    clickHandler={() => {
+                      setIsRegister(!isRegister);
+                      setErrorMessage("");
+                    }}
+                    text="Sign Up"
+                  />
+                )}
               <Button
                 clickHandler={() => setErrorMessage("")}
                 text="Exit"
