@@ -37,6 +37,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.png" />
       {/* wrap entire application in Auth Provider  */}
 
       <body
