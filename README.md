@@ -3,7 +3,7 @@
 Moody is a daily Mood tracking web application that encourages users to give their mood-levels a simple daily score, with the aim to improve over time
 
 ## Use the app
-moodywebapp.netlify.app
+https://moodywebapp.netlify.app
 
 ## Features
 - Login authentication using Firebase
