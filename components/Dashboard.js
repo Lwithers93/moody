@@ -38,7 +38,9 @@ export default function Dashboard() {
   // Status bar
   const statuses = {
     ...countValues(),
-    time_remaining: `${23 - now.getHours()}hrs ${60 - now.getMinutes()}mins`,
+    time_remaining_today: `${23 - now.getHours()}hrs ${
+      60 - now.getMinutes()
+    }mins`,
   };
 
   // must be async function to throw response to firebase
